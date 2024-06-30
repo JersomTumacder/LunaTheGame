@@ -1,0 +1,133 @@
+/* Global styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  user-select: none;
+  font-family: 'Fredoka One', sans-serif; /* Use the Fredoka One font */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('imgs/homes.jpg') center/cover no-repeat; /* Optimized shorthand property */
+}
+
+/* Game world styles */
+.world {
+  position: relative;
+  overflow: hidden;
+}
+
+.score, .high-score {
+  position: absolute;
+  font-size: 3vmin;
+  z-index: 1;
+}
+
+.score {
+  top: calc(1vmin + 5vmin); /* Position score below high score text */
+  left: 1vmin; /* Align with left edge */
+}
+
+.high-score {
+  position: absolute;
+  top: 1vmin;
+  left: 1vmin; /* Position high score at top left */
+}
+
+/* Start screen styles */
+.start-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding: 20px;
+  background-color: #f0e6f6; /* Soft pastel color */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center-align text */
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+.hide {
+  display: none;
+}
+
+/* Ground styles */
+.ground {
+  position: absolute;
+  width: 300%;
+  bottom: 0;
+  left: calc(var(--left) * 1%);
+}
+
+/* Luna character styles */
+.luna {
+  position: absolute;
+  left: 1%;
+  height: 30%;
+  bottom: calc(var(--bottom) * 1%);
+}
+
+/* Chocolate styles */
+.chocolate {
+  position: absolute;
+  height: 30%;
+  bottom: 0;
+  left: calc(var(--left) * 1%);
+}
+
+/* Settings icon styles */
+.settings-icon {
+  position: absolute;
+  top: 1vmin;
+  right: 1vmin;
+  font-size: 3vmin;
+  cursor: pointer;
+  z-index: 2; /* Ensure it's above other elements */
+}
+
+/* Settings popup styles */
+.settings-popup {
+  position: absolute;
+  top: 5vmin;
+  right: 1vmin;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1vmin;
+  z-index: 2; /* Ensure it's above other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.settings-popup label {
+  display: block;
+  font-size: 2vmin;
+  margin-bottom: 0.5vmin; /* Add margin between labels */
+}
+
+.settings-popup .close-btn {
+  display: block;
+  margin-top: 1vmin;
+  padding: 0.5vmin;
+  background-color: #f0e6f6; /* Soft pastel color matching the start screen */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2vmin;
+  text-align: center;
+}
+
+/* Focus styles */
+body:focus-within {
+  outline: none;
+}
+
+*:focus {
+  outline: 2px solid #4d90fe; /* Blue outline for focus */
+  outline-offset: 2px;
+}
+

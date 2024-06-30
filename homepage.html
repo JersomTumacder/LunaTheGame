@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Luna The Game</title>
+  <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+  <!-- Import the Fredoka One font -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('imgs/home.jpg');
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      font-family: 'Fredoka One', sans-serif; /* Use the Fredoka One font */
+      font-size: 24px; /* Adjust the font size as needed */
+      padding: 20px 100px;
+      background-color: #3d3a3a;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 600px;
+    }
+
+    button:hover {
+      background-color: #d83c36;
+    }
+  </style>
+</head>
+<body>
+  <button id="start-button">Let's Play!</button>
+
+  <script>
+    // Redirect to the game page when the start button is clicked
+    document.getElementById("start-button").addEventListener("click", function() {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
